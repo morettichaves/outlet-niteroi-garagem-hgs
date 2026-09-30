@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111214">
+  <meta name="description" content="Catálogo demonstrativo do Outlet Niterói Garagem HGS. Consulte disponibilidade e chame pelo WhatsApp.">
+  <title>Outlet Niterói | Garagem HGS</title>
+  <style>
+    :root{--bg:#111214;--panel:#191a1d;--panel-2:#202125;--text:#f4f4f2;--muted:#a8a9ad;--line:#303136;--accent:#f0a323;--accent-2:#ffca66;--green:#8fbd82}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+    a{color:inherit;text-decoration:none}
+    .topline{background:#0c0d0e;border-bottom:1px solid #28292c;color:#d4d4d3;font-size:.85rem;text-align:center;padding:.55rem 1rem}
+    .topline strong{color:var(--accent-2);font-weight:700}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{background:linear-gradient(115deg,#191a1c 0%,#111214 70%);border-bottom:1px solid var(--line)}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.06em}
+    .brand-mark{width:48px;height:48px;border:2px solid var(--accent);border-radius:13px;display:grid;place-items:center;color:var(--accent);font-size:.9rem;line-height:1;box-shadow:inset 0 0 18px #f0a32318}
+    .brand-name{font-size:1.1rem;line-height:1.1}
+    .brand-name small{display:block;color:#a9aaad;font-size:.68rem;letter-spacing:.16em;margin-top:5px}
+    .nav-note{color:var(--muted);font-size:.9rem}
+    main{padding:35px 0 76px}
+    .intro{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin:5px 0 24px}
+    .eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--accent-2);font-weight:800;margin:0 0 9px}
+    h1{font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.04em;margin:0;max-width:730px}
+    .intro p{color:#b5b6ba;font-size:1rem;margin:12px 0 0;max-width:670px}
+    .whatsapp-top{background:var(--accent);color:#211607;font-weight:800;border-radius:9px;padding:13px 17px;white-space:nowrap;transition:.18s ease}
+    .whatsapp-top:hover,.buy:hover{background:var(--accent-2);transform:translateY(-1px)}
+    .notice{display:flex;gap:12px;align-items:flex-start;background:#17181a;border:1px solid #36373b;border-left:3px solid var(--accent);padding:13px 16px;border-radius:8px;color:#c7c8cb;font-size:.91rem;margin:24px 0 26px}
+    .notice b{color:#fff}
+    .toolbar{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:25px 0 17px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap}
+    .filter{font:inherit;font-size:.9rem;color:#d1d1d3;background:#1a1b1e;border:1px solid #343539;border-radius:999px;padding:8px 13px;cursor:pointer}
+    .filter:hover,.filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#211607;font-weight:750}
+    .search{font:inherit;color:var(--text);background:#1b1c1f;border:1px solid #3a3b3f;border-radius:8px;padding:10px 13px;width:min(270px,100%);outline:none}
+    .search:focus{border-color:var(--accent)}
+    .section-head{display:flex;align-items:center;justify-content:space-between;margin:24px 0 13px}
+    .section-head h2{font-size:1.15rem;margin:0;letter-spacing:-.01em}
+    .section-head span{font-size:.84rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+    .card{background:var(--panel);border:1px solid #303136;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0;transition:transform .18s ease,border-color .18s ease}
+    .card:hover{transform:translateY(-3px);border-color:#69605a}
+    .photo{height:205px;background:#f4f3f0;position:relative;display:grid;place-items:center;padding:12px}
+    .photo img{width:100%;height:100%;object-fit:contain}
+    .category-tag{position:absolute;left:11px;top:11px;color:#fff;background:#111d;border:1px solid #ffffff28;border-radius:999px;padding:4px 9px;font-size:.71rem;font-weight:750}
+    .details{padding:14px 14px 15px;display:flex;flex-direction:column;flex:1}
+    .details h3{font-size:1rem;line-height:1.3;margin:0 0 7px;min-height:2.6em}
+    .status{color:var(--green);font-size:.8rem;margin:0 0 12px}
+    .prices{display:flex;align-items:baseline;gap:8px;margin:0 0 13px}
+    .current{font-size:1.23rem;font-weight:850;letter-spacing:-.025em}
+    .old{color:#898a8e;font-size:.85rem;text-decoration:line-through}
+    .buy{display:block;text-align:center;background:var(--accent);color:#211607;padding:10px 12px;border-radius:7px;font-weight:800;margin-top:auto;transition:.18s ease}
+    .empty{display:none;color:#b9babe;text-align:center;padding:40px 10px;border:1px dashed #45464a;border-radius:10px;grid-column:1/-1}
+    .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}
+    .info{background:var(--panel);border:1px solid #303136;border-radius:10px;padding:17px}
+    .info b{display:block;color:var(--accent-2);margin-bottom:5px}
+    .info p{color:#b6b7bb;margin:0;font-size:.9rem}
+    footer{border-top:1px solid var(--line);padding:22px 0;color:#a7a8ab;font-size:.85rem}
+    footer .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .demo{color:var(--accent-2);font-weight:700}
+    @media(max-width:950px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.photo{height:190px}}
+    @media(max-width:700px){.wrap{width:min(100% - 28px,540px)}.nav{min-height:70px}.nav-note{display:none}.intro{display:block}.whatsapp-top{display:inline-block;margin-top:16px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{height:155px;padding:9px}.details{padding:11px}.details h3{font-size:.91rem}.status{font-size:.74rem}.current{font-size:1.1rem}.old{font-size:.78rem}.buy{font-size:.88rem;padding:9px 6px}.toolbar{align-items:stretch}.filters{order:2}.search{width:100%;order:1}.info-grid{grid-template-columns:1fr}.topline{font-size:.77rem}}
+    @media(max-width:380px){.grid{grid-template-columns:1fr}.photo{height:215px}.details h3{min-height:0}}
+  </style>
+</head>
+<body>
+  <div class="topline"><strong>PROTÓTIPO DE CATÁLOGO</strong> · Mais praticidade para encontrar os achados</div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#topo" aria-label="Outlet Niterói Garagem HGS">
+        <span class="brand-mark">HGS</span>
+        <span class="brand-name">GARAGEM HGS<small>OUTLET NITERÓI</small></span>
+      </a>
+      <span class="nav-note">Achados com desconto em Niterói</span>
+      <a class="whatsapp-top" href="https://wa.me/5521993043583?text=Oi%21%20Vi%20o%20cat%C3%A1logo%20do%20Outlet%20Niter%C3%B3i.%20Queria%20consultar%20a%20disponibilidade." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+  </header>
+  <main id="topo" class="wrap">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">Achados com desconto · Niterói</p>
+        <h1>Um bom achado merece ser fácil de encontrar.</h1>
+        <p>Veja alguns produtos do Outlet Niterói. Gostou de algum? Consulte a disponibilidade e combine a compra direto pelo WhatsApp.</p>
+      </div>
+    </section>
+    <div class="notice"><span aria-hidden="true">●</span><span><b>Estoque limitado:</b> os produtos podem ser vendidos a qualquer momento. A disponibilidade, a entrega e a retirada são confirmadas diretamente com o Outlet.</span></div>
+    <div class="toolbar" aria-label="Busca e categorias">
+      <div class="filters" id="filters"></div>
+      <input class="search" id="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+    </div>
+    <div class="section-head"><h2 id="sectionTitle">Produtos em destaque</h2><span id="count"></span></div>
+    <section class="grid" id="grid" aria-live="polite"></section>
+    <section class="info-grid" aria-label="Informações de compra">
+      <div class="info"><b>Produtos conferidos</b><p>Itens novos, retornados ao estoque por recusa ou erro de entrega, verificados pela equipe.</p></div>
+      <div class="info"><b>Entrega em Niterói</b><p>Frete grátis para alguns bairros. Consulte a região e combine os detalhes pelo WhatsApp.</p></div>
+      <div class="info"><b>Retirada rápida</b><p>Se preferir, combine a retirada diretamente com o responsável pelo Outlet.</p></div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><span>Outlet Niterói · Garagem HGS</span><span class="demo">Demonstração com produtos e preços enviados em 30/09/2026</span></div></footer>
+  <script>
+    const phone = '5521993043583';
+    const products = [
+      {name:'Conjunto de bacias plásticas caneladas · 4 peças',category:'Cozinha',price:'R$ 24,00',old:'R$ 36,00',image:'bacias.jpg'},
+      {name:'Jarra de vidro borossilicato · 1,5 L',category:'Cozinha',price:'R$ 29,00',old:'R$ 49,00',image:'jarra-borosilicato.jpg'},
+      {name:'Panela de alumínio fundido · 6 L',category:'Cozinha',price:'R$ 58,00',old:'R$ 72,00',image:'panela-6l.jpg'},
+      {name:'Processador manual de alimentos · inox, 3 lâminas',category:'Cozinha',price:'R$ 27,00',old:'R$ 38,00',image:'processador.jpg'},
+      {name:'Balança digital de precisão para cozinha · até 10 kg',category:'Eletrodomésticos',price:'R$ 49,00',old:'R$ 74,00',image:'balanca-digital.jpg'},
+      {name:'Aspirador de pó portátil sem fio · 3 em 1',category:'Eletrodomésticos',price:'R$ 31,99',old:'R$ 52,00',image:'aspirador-portatil.jpg'},
+      {name:'Granulado higiênico de madeira para gatos · 15 kg',category:'Pet shop',price:'R$ 29,99',old:'R$ 53,00',image:'granulado-gatos.jpg'},
+      {name:'Fonte bebedouro automática para cães e gatos · 1,5 L',category:'Pet shop',price:'R$ 37,00',old:'R$ 58,00',image:'fonte-pet.jpg'},
+      {name:'Botina infantil estilo rodeio country',category:'Bolsas e calçados',price:'R$ 62,00',old:'R$ 85,00',image:'botina-infantil.jpg'},
+      {name:'Café torrado e moído Varanda · 100% arábica',category:'Alimentos',price:'R$ 38,00',old:'R$ 59,00',image:'cafe-varanda.jpg'},
+      {name:'Desincrustante para chuva ácida · vidro, rodas e alumínio',category:'Automotivo',price:'R$ 19,99',old:'R$ 35,00',image:'produto-automotivo.jpg'},
+      {name:'Espelho grande retangular lapidado · 90 × 40 cm',category:'Decoração',price:'R$ 68,00',old:'R$ 129,00',image:'espelho.jpg'},
+      {name:'Plaina 110 V · 1685 W',category:'Ferramentas',price:'R$ 189,00',old:'R$ 299,00',image:'plaina.jpg'}
+    ];
+    const grid=document.getElementById('grid'), filters=document.getElementById('filters'), search=document.getElementById('search');
+    let active='Todos';
+    const categories=['Todos',...new Set(products.map(p=>p.category))];
+    categories.forEach((label,i)=>{const b=document.createElement('button');b.className='filter';b.type='button';b.textContent=label;b.setAttribute('aria-pressed',i===0?'true':'false');b.onclick=()=>{active=label;[...filters.children].forEach(x=>x.setAttribute('aria-pressed',x.textContent===label?'true':'false'));render()};filters.appendChild(b)});
+    function render(){
+      const q=search.value.trim().toLocaleLowerCase('pt-BR');
+      const shown=products.filter(p=>(active==='Todos'||p.category===active)&&p.name.toLocaleLowerCase('pt-BR').includes(q));
+      grid.innerHTML=shown.map(p=>{const msg=encodeURIComponent(`Oi! Vi no catálogo do Outlet Niterói: ${p.name} (${p.price}). Ainda está disponível?`);return `<article class="card"><div class="photo"><span class="category-tag">${p.category}</span><img src="assets/${p.image}" alt="${p.name}" loading="lazy"></div><div class="details"><h3>${p.name}</h3><p class="status">Consulte a disponibilidade</p><p class="prices"><span class="current">${p.price}</span><span class="old">${p.old}</span></p><a class="buy" target="_blank" rel="noopener" href="https://wa.me/${phone}?text=${msg}">Perguntar pelo WhatsApp</a></div></article>`}).join('');
+      document.getElementById('count').textContent=`${shown.length} ${shown.length===1?'produto':'produtos'}`;
+      document.getElementById('sectionTitle').textContent=active==='Todos'?'Produtos em destaque':active;
+      const empty=document.getElementById('empty');if(!shown.length)grid.innerHTML='<div class="empty" style="display:block">Não encontrei esse produto. Tente outra busca.</div>';
+    }
+    search.addEventListener('input',render);render();
+  </script>
+</body>
+</html>
